@@ -1,0 +1,21 @@
+
+this is an example of a an admin record
+{
+    "name": "Huan Carlos",
+    "username":"HC4g6",
+    "password": "Crocomboosh3", 
+	"email":"huancarl@yahoo.com",
+	"phoneno":"0774567378",
+	"address":"31/3,Hill Street Kandy",
+	"accounttype":1
+}
+
+this is an example of a an student record
+{
+    "name": "Peter Rogers",
+    "username":"PRgcr3",
+    "password": "Gauisrex45RE", 
+	"email":"peterrog@yahoo.com",
+	"phoneno":"0775397478",
+	"address":"6/1,York Street Colombo"
+}
