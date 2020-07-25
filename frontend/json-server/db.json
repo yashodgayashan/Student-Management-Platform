@@ -1,0 +1,161 @@
+{
+  "users": [
+    {
+      "id": 0,
+      "username": "Bobby Tarantino",
+      "password": "bt12",
+      "address": "Chicago",
+      "email": "bt@gmail.com",
+      "telnum": "0115566452",
+      "type": "Student"
+    },
+    {
+      "id": 1,
+      "username": "George Michael",
+      "password": "gm23",
+      "address": "California",
+      "email": "gm@gmail.com",
+      "telnum": "0115588564",
+      "type": "Student"
+    },
+    {
+      "id": 2,
+      "username": "Marshall Mathers",
+      "password": "mm34",
+      "address": "New York",
+      "email": "mm@gmail.com",
+      "telnum": "011776645",
+      "type": "Student"
+    },
+    {
+      "id": 3,
+      "username": "Micheal Scott",
+      "password": "ms45",
+      "address": "San Francisco",
+      "email": "ms@gmail.com",
+      "telnum": "0116655523",
+      "type": "Admin"
+    },
+    {
+      "id": 4,
+      "username": "Jim Halpert",
+      "password": "jh56",
+      "address": "Florida",
+      "email": "jh@gmail.com",
+      "telnum": "0119955548",
+      "type": "Student"
+    },
+    {
+      "id": 5,
+      "username": "Pam Beesly",
+      "password": "pb67",
+      "address": "Ohio",
+      "email": "pb@gmail.com",
+      "telnum": "0114477652",
+      "type": "Student"
+    },
+    {
+      "id": 6,
+      "username": "Dwight Schrute",
+      "password": "ds78",
+      "address": "Maryland",
+      "email": "ds@gmail.com",
+      "telnum": "0112365563",
+      "type": "Admin"
+    },
+    {
+      "id": 7,
+      "username": "Angela Martin",
+      "password": "am89",
+      "address": "Minnesota",
+      "email": "am@gmail.com",
+      "telnum": "0113546985",
+      "type": "Student"
+    },
+    {
+      "id": 8,
+      "username": "Ryan Howard",
+      "password": "rh90",
+      "address": "Texas",
+      "email": "rh@gmail.com",
+      "telnum": "0112546854",
+      "type": "Student"
+    },
+    {
+      "id": 9,
+      "username": "Andy Bernard",
+      "password": "ab09",
+      "address": "New York",
+      "email": "ab@gmail.com",
+      "telnum": "0115647533",
+      "type": "Student"
+    },
+    {
+      "id": 10,
+      "username": "Kevin Malone",
+      "password": "km98",
+      "address": "Chicago",
+      "email": "km@gmail.com",
+      "telnum": "0115469852",
+      "type": "Student"
+    },
+    {
+      "id": 11,
+      "username": "Kelly Kapoor",
+      "password": "kk87",
+      "address": "California",
+      "email": "kk@gmail.com",
+      "telnum": "0112236254",
+      "type": "Student"
+    },
+    {
+      "username": "Post Malone",
+      "password": "pm99",
+      "address": "Beverly Hills",
+      "email": "pm@gmail.com",
+      "telnum": "0225513857",
+      "type": "Student",
+      "id": 12
+    },
+    {
+      "username": "John Boyega",
+      "password": "jb08",
+      "address": "California",
+      "email": "jb@gmail.com",
+      "telnum": "0556324855",
+      "id": 13
+    },
+    {
+      "username": "Adaam Young",
+      "password": "ay64",
+      "address": "Dakota",
+      "email": "ay@gmail.com",
+      "telnum": "0123355445",
+      "id": 14
+    },
+    {
+      "username": "David Bowie",
+      "password": "db12",
+      "address": "Manhattan",
+      "email": "db@gmail.com",
+      "telnum": "0332154652",
+      "id": 15
+    },
+    {
+      "username": "Daniel Radcliffe",
+      "password": "dr65",
+      "address": "Birmingham",
+      "email": "dr@gmail.com",
+      "telnum": "0117456388",
+      "id": 16
+    },
+    {
+      "username": "Bojitha",
+      "password": "qwerty",
+      "address": "Colombo",
+      "email": "boji@gmail.com",
+      "telnum": "0117175600",
+      "id": 17
+    }
+  ]
+}
