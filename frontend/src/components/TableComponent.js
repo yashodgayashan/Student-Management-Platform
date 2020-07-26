@@ -11,8 +11,6 @@ class TableComponent extends Component {
 		this.handleDelete = this.handleDelete.bind(this);
 	}
 	
-
-
 	handleDelete(id){
         this.props.deleteUser(id); 
     }

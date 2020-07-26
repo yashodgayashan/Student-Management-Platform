@@ -89,24 +89,6 @@
       "email": "ab@gmail.com",
       "telnum": "0115647533",
       "type": "Student"
-    },
-    {
-      "id": 10,
-      "username": "Kevin Malone",
-      "password": "km98",
-      "address": "Chicago",
-      "email": "km@gmail.com",
-      "telnum": "0115469852",
-      "type": "Student"
-    },
-    {
-      "id": 11,
-      "username": "Kelly Kapoor",
-      "password": "kk87",
-      "address": "California",
-      "email": "kk@gmail.com",
-      "telnum": "0112236254",
-      "type": "Student"
     }
   ]
 }

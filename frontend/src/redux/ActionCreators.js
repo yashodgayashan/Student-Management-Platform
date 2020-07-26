@@ -109,9 +109,11 @@ export const deleteUser = (id) => (dispatch) => {
             throw error;
       })		
     .then(response => response.json())
+    .then(response => alert("User Deleted!" + JSON.stringify(response)))
+	.then(x => dispatch(fetchUsers()))
     .catch(error => {
-      console.log("post users", error.message);
-      alert("User Could not be deleted\nError: " + error.message);
+      console.log("post feedbacks", error.message);
+      alert("Your feedback could not be posted\nError: " + error.message);
     });
 };
 
