@@ -107,55 +107,6 @@
       "email": "kk@gmail.com",
       "telnum": "0112236254",
       "type": "Student"
-    },
-    {
-      "username": "Post Malone",
-      "password": "pm99",
-      "address": "Beverly Hills",
-      "email": "pm@gmail.com",
-      "telnum": "0225513857",
-      "type": "Student",
-      "id": 12
-    },
-    {
-      "username": "John Boyega",
-      "password": "jb08",
-      "address": "California",
-      "email": "jb@gmail.com",
-      "telnum": "0556324855",
-      "id": 13
-    },
-    {
-      "username": "Adaam Young",
-      "password": "ay64",
-      "address": "Dakota",
-      "email": "ay@gmail.com",
-      "telnum": "0123355445",
-      "id": 14
-    },
-    {
-      "username": "David Bowie",
-      "password": "db12",
-      "address": "Manhattan",
-      "email": "db@gmail.com",
-      "telnum": "0332154652",
-      "id": 15
-    },
-    {
-      "username": "Daniel Radcliffe",
-      "password": "dr65",
-      "address": "Birmingham",
-      "email": "dr@gmail.com",
-      "telnum": "0117456388",
-      "id": 16
-    },
-    {
-      "username": "Bojitha",
-      "password": "qwerty",
-      "address": "Colombo",
-      "email": "boji@gmail.com",
-      "telnum": "0117175600",
-      "id": 17
     }
   ]
 }

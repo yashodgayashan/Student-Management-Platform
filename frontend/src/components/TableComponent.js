@@ -4,10 +4,21 @@ import React, { Component } from 'react'
 import { Table, Button } from 'reactstrap';
 import { FadeTransform, Fade, Stagger } from 'react-animation-components';
 
-function TableComponent(props) {
+class TableComponent extends Component {
+	
+	constructor(props){
+		super(props);
+		this.handleDelete = this.handleDelete.bind(this);
+	}
 	
 
-	const user = props.users.map((user) => {		
+
+	handleDelete(id){
+        this.props.deleteUser(id); 
+    }
+	
+	render(){
+		const user = this.props.users.map((user) => {		
             return (
 				<>
 					<tr>
@@ -21,7 +32,7 @@ function TableComponent(props) {
 						<div style={{width:"110px"}}>
 						  <Button color="yellow">Edit</Button>
 						  {' '}
-						  <Button color="danger" >Del</Button>
+						  <Button color="danger" onClick={() => this.handleDelete(user.id)} >Del</Button>
 						</div>
 					  </td>
 					</tr>
@@ -31,8 +42,7 @@ function TableComponent(props) {
         });
 		
 		
-		
-		if (props.isLoading) {
+		if (this.props.isLoading) {
             return(
                 <div className="container">
                     <div className="row">            
@@ -41,12 +51,12 @@ function TableComponent(props) {
                 </div>
             );
         }
-        else if (props.errMess) {
+        else if (this.props.errMess) {
             return(
                 <div className="container">
                     <div className="row"> 		
                         <div className="col-12">
-                            <h4>{props.errMess}</h4>
+                            <h4>{this.props.errMess}</h4>
                         </div>
                     </div>
                 </div>
@@ -70,6 +80,8 @@ function TableComponent(props) {
 						</tbody>
 					</Table>
 		  )
+	}
+	
 }
 
 export default TableComponent;   

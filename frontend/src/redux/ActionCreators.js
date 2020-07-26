@@ -6,9 +6,10 @@ export const addUser = (user) => ({
     payload: user
 });
 
+
 export const fetchUsers = () => (dispatch) => {
 
-    dispatch(usersLoading(true));		
+    dispatch(usersLoading(true));			//sets loading to true	
 	
 	return fetch(baseUrl + 'users')		
 		.then(response => {
@@ -25,7 +26,7 @@ export const fetchUsers = () => (dispatch) => {
             throw errmess;
       })
 		.then(response => response.json())		
-		.then(users => dispatch(addUsers(users)))		
+		.then(users => dispatch(addUsers(users)))			//if successful in getting users call the addUsers action passing in the list of users available in users
 		.catch(error => dispatch(usersFailed(error.message)));
 }
 
@@ -38,7 +39,7 @@ export const fetchUsers = () => (dispatch) => {
 			payload: errmess
 		});
 
-		export const addUsers = (users) => ({		
+		export const addUsers = (users) => ({			//will store the fetched users in our state
 			type: ActionTypes.ADD_USERS,			 
 			payload: users							
 		});
@@ -83,3 +84,36 @@ export const postUser = (username, password, address, email, telnum, type) => (d
       alert("New user could not be added\nError: " + error.message);
     });
 };
+
+
+
+export const deleteUser = (id) => (dispatch) => {
+
+	return fetch(baseUrl + 'users/' + id.toString(), {
+        method: "DELETE",	
+        headers: {
+          'Content-type': 'application/json; charset=UTF-8'	
+        },
+        credentials: "same-origin"	
+    })
+    .then(response => {			
+        if (response.ok) {
+          return response;
+        } else {				
+          var error = new Error('Error ' + response.status + ': ' + response.statusText);
+          error.response = response;
+          throw error;
+        }
+      },
+      error => {
+            throw error;
+      })		
+    .then(response => response.json())
+    .catch(error => {
+      console.log("post users", error.message);
+      alert("User Could not be deleted\nError: " + error.message);
+    });
+};
+
+
+

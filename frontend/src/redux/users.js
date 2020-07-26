@@ -1,6 +1,6 @@
 import * as ActionTypes from './ActionTypes';
 
-export const Users = (state = { 
+export const Users = (state = { 			//reducer will update the state
 	errMess: null, 
 	users:[]
 	}, 

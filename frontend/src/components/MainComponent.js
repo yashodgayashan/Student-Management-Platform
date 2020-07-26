@@ -4,21 +4,21 @@ import AddModal from './AddModal';
 import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { actions } from 'react-redux-form';
-import { fetchUsers, postUser } from '../redux/ActionCreators'; 
+import { fetchUsers, postUser, deleteUser } from '../redux/ActionCreators'; 
 import { Container, Row, Col, Table } from 'reactstrap'
 
 
 
-const mapStateToProps = state => {	
+const mapStateToProps = state => {			//access the state
   return {
-	users: state.users,
+	users: state.users,			//state.users will be stored in users
   }
 }
 
-const mapDispatchToProps = dispatch => ({
-	  fetchUsers: () => { dispatch(fetchUsers())},
-	  postUser: (username, password, address, email, telnum, type) => dispatch(postUser(username, password, address, email, telnum, type))
-
+const mapDispatchToProps = dispatch => ({			//recieves dispatch as a parameter
+	  fetchUsers: () => { dispatch(fetchUsers())},		//fetchUsers is the key which dispatches thefetch users action creator
+	  postUser: (username, password, address, email, telnum, type) => dispatch(postUser(username, password, address, email, telnum, type)),
+	  deleteUser: (id) => {dispatch (deleteUser(id))}
   });
 
 
@@ -32,7 +32,10 @@ const mapDispatchToProps = dispatch => ({
 		  this.props.fetchUsers();
 	  }
 	  
-	
+	 componentDidUpdate(){
+		 this.props.fetchUsers();
+	 }
+	 
 	render(){
 		return(
 			<div className="container">
@@ -41,6 +44,7 @@ const mapDispatchToProps = dispatch => ({
 						users={this.props.users.users}
 						isLoading={this.props.users.isLoading}
 						errMess={this.props.users.errMess}
+						deleteUser = {this.props.deleteUser}
 					/>
 				</div>
 				<div className="row m-10">
