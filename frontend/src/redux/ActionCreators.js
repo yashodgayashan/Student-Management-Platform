@@ -118,4 +118,45 @@ export const deleteUser = (id) => (dispatch) => {
 };
 
 
+export const editUser = (id, username, password, address, email, telnum, type) => (dispatch) => {
+	
+	const changeUser = {		
+        username: username,			
+        password: password,
+        address: address,
+        email: email,
+		telnum: telnum,
+		type: type
+    };
+
+
+	return fetch(baseUrl + 'users/' + id.toString(), {
+        method: "PUT",
+        body: JSON.stringify(changeUser),	
+        headers: {
+          "Content-Type": "application/json"	
+        },
+        credentials: "same-origin"	
+    })
+    .then(response => {			
+        if (response.ok) {
+          return response;
+        } else {				
+          var error = new Error('Error ' + response.status + ': ' + response.statusText);
+          error.response = response;
+          throw error;
+        }
+      },
+      error => {
+            throw error;
+      })		
+    .then(response => response.json())
+    .then(response => alert("Thank you for your feedback!" + JSON.stringify(response)))
+	.then(x => dispatch(fetchUsers()))
+    .catch(error => {
+      console.log("Updating User", error.message);
+      alert("User could not be updated\nError: " + error.message);
+    });
+};
+
 

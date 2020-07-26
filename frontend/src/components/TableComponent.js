@@ -3,6 +3,7 @@ import { baseUrl } from '../shared/baseUrl';
 import React, { Component } from 'react'
 import { Table, Button } from 'reactstrap';
 import { FadeTransform, Fade, Stagger } from 'react-animation-components';
+import EditdetailsModal from './EditdetailsModal';
 
 class TableComponent extends Component {
 	
@@ -14,6 +15,7 @@ class TableComponent extends Component {
 	handleDelete(id){
         this.props.deleteUser(id); 
     }
+	
 	
 	render(){
 		const user = this.props.users.map((user) => {		
@@ -28,7 +30,7 @@ class TableComponent extends Component {
 					  <td>{user.telnum}</td>
 					  <td>
 						<div style={{width:"110px"}}>
-						  <Button color="yellow">Edit</Button>
+						  <EditdetailsModal userdata={user}/>
 						  {' '}
 						  <Button color="danger" onClick={() => this.handleDelete(user.id)} >Del</Button>
 						</div>
