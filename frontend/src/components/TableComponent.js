@@ -1,8 +1,6 @@
 import { Loading } from './LoadingComponent';
-import { baseUrl } from '../shared/baseUrl';
 import React, { Component } from 'react'
 import { Table, Button } from 'reactstrap';
-import { FadeTransform, Fade, Stagger } from 'react-animation-components';
 import EditdetailsModal from './EditdetailsModal';
 
 class TableComponent extends Component {
@@ -13,7 +11,10 @@ class TableComponent extends Component {
 	}
 	
 	handleDelete(id){
-        this.props.deleteUser(id); 
+		let confirmDelete = window.confirm('Delete item forever?')
+		if(confirmDelete){
+			this.props.deleteUser(id); 
+		}else{alert("Aborted!")}
     }
 	
 	
@@ -64,7 +65,7 @@ class TableComponent extends Component {
         }
 		else
 			return(
-					<Table dark>
+					<Table dark responsive hover>
 						<thead>
 							<tr>
 							  <th>ID</th>

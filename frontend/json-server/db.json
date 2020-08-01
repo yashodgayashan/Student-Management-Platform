@@ -83,12 +83,11 @@
     },
     {
       "id": 9,
-      "username": "Andy Bernard",
-      "password": "ab09",
-      "address": "New York",
-      "email": "ab@gmail.com",
-      "telnum": "0115647533",
-      "type": "Student"
+      "username": "Sharuka Gunaratne",
+      "password": "ag69",
+      "address": "Colombo",
+      "email": "ddp@gmail.com",
+      "telnum": "0113658526"
     }
   ]
 }

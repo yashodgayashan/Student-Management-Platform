@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Button, Modal, ModalHeader, ModalBody, Row, Col, Label } from 'reactstrap';
-import { Control, LocalForm, Errors, Form } from 'react-redux-form';
+import { Control, LocalForm, Errors } from 'react-redux-form';
 
 const required = (val) => val && val.length;
 const maxLength = (len) => (val) => !(val) || (val.length <= len);
@@ -131,7 +131,7 @@ class AddModal extends Component {
                                         placeholder="Tel. Number"
                                         className="form-control"
                                         validators={{
-                                            required, minLength: minLength(3), maxLength: maxLength(15), isNumber
+                                            required, minLength: minLength(9), maxLength: maxLength(10), isNumber
                                         }}
                                          />
                                     <Errors
@@ -140,8 +140,8 @@ class AddModal extends Component {
                                         show="touched"
                                         messages={{
                                             required: 'Required ',
-                                            minLength: 'Must be greater than 2 numbers ',
-                                            maxLength: 'Must be 15 numbers or less ',
+                                            minLength: 'Must be greater than 9 numbers ',
+                                            maxLength: 'Must be 10 numbers or less ',
                                             isNumber: 'Must be a number'
                                         }}
                                      />
