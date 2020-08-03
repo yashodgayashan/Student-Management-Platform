@@ -151,7 +151,7 @@ export const editUser = (id, username, password, address, email, telnum, type) =
             throw error;
       })		
     .then(response => response.json())
-    .then(response => alert("Thank you for your feedback!" + JSON.stringify(response)))
+    .then(response => alert("User Edited Succesfully"))
 	.then(x => dispatch(fetchUsers()))
     .catch(error => {
       console.log("Updating User", error.message);

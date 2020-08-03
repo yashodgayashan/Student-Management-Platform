@@ -82,12 +82,12 @@
       "type": "Student"
     },
     {
-      "id": 9,
-      "username": "Sharuka Gunaratne",
-      "password": "ag69",
+      "username": "Yomal Perera",
+      "password": "sp24",
       "address": "Colombo",
-      "email": "ddp@gmail.com",
-      "telnum": "0113658526"
+      "email": "sp@gmail.com",
+      "telnum": "0112354544",
+      "id": 9
     }
   ]
 }

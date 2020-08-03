@@ -31,9 +31,6 @@ const mapDispatchToProps = dispatch => ({			//recieves dispatch as a parameter
 		  this.props.fetchUsers();
 	  }
 	  
-	 componentDidUpdate(){
-			this.props.fetchUsers();
-	 }
 	 
 	render(){
 		return(

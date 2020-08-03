@@ -2,6 +2,15 @@ import React, { Component } from 'react';
 import { Button, Modal, ModalHeader, ModalBody, Row, Col, Label } from 'reactstrap';
 import { Control, LocalForm, Errors } from 'react-redux-form';
 import { baseUrl } from '../shared/baseUrl';
+import { fetchUsers, editUser } from '../redux/ActionCreators'; 
+import { connect } from 'react-redux';
+
+
+const mapDispatchToProps = dispatch => ({			
+	  fetchUsers: () => { dispatch(fetchUsers())},		
+	  editUser: (id, username, password, address, email, telnum, type) => dispatch(editUser(id, username, password, address, email, telnum, type))
+  });
+
 
 
 class EditdetailsModal extends Component {
@@ -32,42 +41,10 @@ class EditdetailsModal extends Component {
 	
 	handleSubmit(values){
         this.toggleModal();
-		//this.props.editUser(this.state.id, this.state.username, this.state.password, this.state.address, this.state.email, this.state.telnum, this.state.type); 
+		this.props.editUser(this.state.id, this.state.username, this.state.password, this.state.address, this.state.email, this.state.telnum, this.state.type); 
 		//send the state values because if they remain unchanged this will send the original value whereas values.x will send a blank valueif we don't fill it in.
 	  
-	  fetch(baseUrl + 'users/' + this.state.id.toString(), {
-      method: 'PUT',
-	  body: JSON.stringify({
-		id: this.state.id,
-        username: this.state.username,
-        password: this.state.password,
-		address: this.state.address,
-        email: this.state.email,
-        telnum: this.state.telnum,
-        type: this.state.type
-      }),
-      headers: {
-        'Content-Type': 'application/json'
-      },
-	  credentials: "same-origin"	
-		})
-		.then(response => {			
-			if (response.ok) {
-			  return response;
-			} else {				
-			  var error = new Error('Error ' + response.status + ': ' + response.statusText);
-			  error.response = response;
-			  throw error;
-			}
-		  },
-		  error => {
-				throw error;
-		  })		
-		.then(response => response.json())
-		.catch(error => {
-		  console.log("Update User", error.message);
-		  alert("User could not be Updated\nError: " + error.message);
-		});
+	  
   }
 
 	
@@ -167,8 +144,7 @@ class EditdetailsModal extends Component {
 		)
 	}
 }
-export default EditdetailsModal; 
-	
+export default connect(null,mapDispatchToProps)(EditdetailsModal);		
 	
 	
 	
