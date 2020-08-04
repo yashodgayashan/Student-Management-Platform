@@ -82,12 +82,12 @@
       "type": "Student"
     },
     {
+      "id": 9,
       "username": "Yomal Perera",
-      "password": "sp24",
+      "password": "yp86",
       "address": "Colombo",
-      "email": "sp@gmail.com",
-      "telnum": "0112354544",
-      "id": 9
+      "email": "yp@gmail.com",
+      "telnum": "0112653254"
     }
   ]
 }

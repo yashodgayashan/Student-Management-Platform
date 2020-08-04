@@ -1,27 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Main from './components/MainComponent';
 import './App.css';
-import { BrowserRouter } from 'react-router-dom';
-import { Provider } from 'react-redux';
-import { ConfigureStore } from './redux/configureStore';
+import UserContextProvider from './context/userContext';
 
-const store = ConfigureStore();
-
-class App extends Component{
-
-	
-	
-	render(){
-		return (
-		<Provider store={store}>
-			<BrowserRouter>
-			  <div className="App">
+const App = props => {
+	return (
+		<div className="App">
+			<UserContextProvider>
 				<Main />
-			  </div>
-			</BrowserRouter>
-		</Provider>
-		);	
-	}
+			</UserContextProvider>
+		</div>
+  );	
 }
-
 export default App;
