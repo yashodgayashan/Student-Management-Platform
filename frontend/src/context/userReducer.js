@@ -1,4 +1,4 @@
-import uuid from 'uuid/v4';
+/*import uuid from 'uuid/v4';
 
 export const userReducer = (state, action) => {
   switch (action.type) {
@@ -15,4 +15,4 @@ export const userReducer = (state, action) => {
     default:
     return state;
 }
-} 
+} */
