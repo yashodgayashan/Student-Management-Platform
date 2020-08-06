@@ -1,0 +1,35 @@
+	{
+        "name": "Alexander Borgia",
+        "username": "ABfh34",
+        "password": "Cronus10zeus",
+        "email": "alexander45@yahoo.com",
+        "phoneno": 775397478,
+        "address": "2/1,8th Lane,John Adams Street Fort",
+    }
+	
+    { 
+        "name": "Cameron Clark",
+        "username": "Ccer4",
+        "password": "rightbough34",
+        "email": "cameroncl@yahoo.com",
+        "phoneno": 774877478,
+        "address": "2/1,6th Lane,Oxford street Galle",
+    }
+	
+    {     
+        "name": "James Bond",
+        "username": "JB785643",
+        "password": "Claughbrooke4",
+        "email": "jbond34@yahoo.com",
+        "phoneno": 774767478,
+        "address": "8/3, 2nd lane Wellawatta",
+    }
+	
+	{
+    "name": "Peter Rogers",
+    "username":"PRgcr3",
+    "password": "Gauisrex45RE", 
+	"email":"peterrog@yahoo.com",
+	"phoneno":"0775397478",
+	"address":"6/1,York Street Colombo"
+	}

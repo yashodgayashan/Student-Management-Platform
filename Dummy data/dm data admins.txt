@@ -5,7 +5,7 @@
 	"email":"patrickdrogers@yahoo.com",
 	"phoneno":"0774767432",
 	"address":"4/2, Hill Street Kandy",
-     "accounttype": true
+     "accounttype": 1
 }
 
 {
@@ -15,5 +15,16 @@
 	"email":"calebrodrigo34@yahoo.com",
 	"phoneno":"0777830432",
 	"address":"12/3, College Avenue Mount Lavinia",
-     "accounttype": true
+     "accounttype": 1
 }
+
+{
+    "name": "Huan Carlos",
+    "username":"HC4g6",
+    "password": "Crocomboosh3", 
+	"email":"huancarl@yahoo.com",
+	"phoneno":"0774567378",
+	"address":"31/3,Hill Street Kandy",
+	"accounttype":1
+}
+
