@@ -1,0 +1,19 @@
+{
+    "name": "Patrick Rogers",
+    "username":"PRCP764",
+    "password": "cLepto34Maniac", 
+	"email":"patrickdrogers@yahoo.com",
+	"phoneno":"0774767432",
+	"address":"4/2, Hill Street Kandy",
+     "accounttype": true
+}
+
+{
+    "name": "Caleb Rodrigo",
+    "username":"CR76H43",
+    "password": "pro478Higsont", 
+	"email":"calebrodrigo34@yahoo.com",
+	"phoneno":"0777830432",
+	"address":"12/3, College Avenue Mount Lavinia",
+     "accounttype": true
+}
