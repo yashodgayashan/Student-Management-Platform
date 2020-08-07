@@ -1,34 +1,33 @@
-import React, { useContext, useEffect } from 'react';
-import TableComponent from './TableComponent';
-import AddModal from './AddModal';
-import HeaderComponent from './HeaderComponent';
-import { userContext } from '../context/userContext';
-import { baseUrl } from '../shared/baseUrl';
+import React, { useContext, useEffect } from "react";
+import TableComponent from "./TableComponent";
+import AddModal from "./AddModal";
+import HeaderComponent from "./HeaderComponent";
+import { userContext } from "../context/userContext";
+import { Loading } from "./LoadingComponent";
 
 const Main = () => {
-	const { users, getUsers, addUser, deleteUser } = useContext(userContext);
+  const { isLoading, users, getUsers, addUser, deleteUser } = useContext(
+    userContext
+  );
 
-	useEffect(() => {
-		getUsers();
-	}, [])
+  useEffect(() => {
+    getUsers();
+  }, []);
 
-	return(
-		<div className="container">
-			<div className>
-				<HeaderComponent />
-			</div>
-			
-			<div className="col-12 mt-2">
-				<AddModal addUser={addUser}/>
-			</div>
-			
-			<div className="col-12 mt-2">
-				<TableComponent 
-					users={users}
-					deleteUser = {deleteUser}
-				/>
-			</div>
-		</div>
-	)
-}
-export default Main;	
+  return (
+    <div className="container">
+      <div className>
+        <HeaderComponent />
+      </div>
+
+      <div className="col-12 mt-2">
+        <AddModal addUser={addUser} isLoading = {isLoading} />
+      </div>
+
+      <div className="col-12 mt-2">
+        <TableComponent users={users} deleteUser={deleteUser} />
+      </div>
+    </div>
+  );
+};
+export default Main;
