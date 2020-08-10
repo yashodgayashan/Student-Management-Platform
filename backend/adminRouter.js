@@ -6,7 +6,7 @@ const Students = require('../models/students');
 
 const adminRouter = express.Router();
 
-dishRouter.use(bodyParser.json());
+adminRouter.use(bodyParser.json());
 
 adminRouter.route('/')
 /*.get((req,res,next) => {
