@@ -10,6 +10,15 @@ adminRouter.use(bodyParser.json());
 
 adminRouter.route('/')
 
+.get((req,res,next) => {
+    Students.find({})
+    .then((students) => {
+        res.statusCode = 200;
+        res.setHeader('Content-Type', 'application/json');
+        res.json(students);
+    }, (err) => next(err))
+    .catch((err) => next(err));
+})
 .post((req, res, next) => {
     Students.create(req.body)
     .then((student) => {
@@ -19,8 +28,7 @@ adminRouter.route('/')
         res.json(student);
     }, (err) => next(err))
     .catch((err) => next(err));
-});
-
+})
 .put((req,res,next) => {
     res.statusCode = 403;
     res.end("PUT Operation not supported on /students");
@@ -28,10 +36,8 @@ adminRouter.route('/')
 });
 
 .delete((req, res, next) => {
-    Students.remove(req.body)
-    
-    }, (err) => next(err))
-    .catch((err) => next(err));
+    res.statusCode = 403;
+    res.end("Not allowed to delete all records at once");
 });
 
 
@@ -61,7 +67,7 @@ adminRouter.route('/:studentId')
         res.json(student);
     }, (err)=>next(err))
     .catch((err)=> next(err));
-});
+})
 
 .delete ((req, res, next) => {
     Students.findByIdAndRemove(req.params.studentId, function (err, resp) { 
