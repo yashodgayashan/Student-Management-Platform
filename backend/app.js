@@ -9,13 +9,9 @@ var logger = require('morgan');
 var path = require('path');
 var session = require('express-session');
 
-
 const Students = require('./models/students');
 var adminRouter = require('./routes/adminRouter');
 var usersRouter = require('./routes/users');
-
-
-
 
 connect.then((db) => {
 	console.log('connected to server');
@@ -62,7 +58,7 @@ app.use(function(req, res, next) {
   next(createError(404));
 });
 
-app.use(function(err, req, res, next) {
+app.use((err, req, res, next) => {
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
   res.status(err.status || 500);
