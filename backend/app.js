@@ -32,12 +32,12 @@ app.use(session({
   store: new FileStore()
 }));
 app.use('/users', usersRouter);
-function auth (req, res, next) {
+var auth = (req, res, next)=> {
     console.log(req.session);
   if(!req.session.students) {
       var err = new Error('You are not authenticated!');
       err.status = 403;
-      return next(err);
+       next(err);
   }
   else {
     if (req.session.students === 'authenticated') {
@@ -46,7 +46,7 @@ function auth (req, res, next) {
     else {
       var err = new Error('you are not authenticated!');
       err.status = 403;
-      return next(err);
+       next(err);
     }
   }
 }
@@ -54,7 +54,7 @@ app.use(auth);
 
 app.use('/students', adminRouter);
 // Catch 404 and forward to error handler
-app.use(function(req, res, next) {
+app.use((req, res, next)=> {
   next(createError(404));
 });
 
