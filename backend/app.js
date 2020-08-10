@@ -1,17 +1,21 @@
+const connect=mongoose.connect(url);
+const mongoose = require('mongoose');
+const url = 'mongodb://localhost:27017/conFusion';
 var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
 var cookieParser = require('cookie-parser');
-var logger = require('morgan');
-
-var session = require('express-session');
+var express = require('express');
 var FileStore = require('session-file-store')(session);
+var logger = require('morgan');
+var path = require('path');
+var session = require('express-session');
+
+
+const Students = require('./models/students');
 var adminRouter = require('./routes/adminRouter');
 var usersRouter = require('./routes/users');
-const mongoose = require('mongoose');
-const Students = require('./models/students');
-const url = 'mongodb://localhost:27017/conFusion';
-const connect=mongoose.connect(url);
+
+
+
 
 connect.then((db) => {
 	console.log('connected to server');
