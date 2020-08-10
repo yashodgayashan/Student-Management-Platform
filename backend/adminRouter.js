@@ -1,11 +1,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-
 const Students = require('../models/students');
-
 const adminRouter = express.Router();
-
 adminRouter.use(bodyParser.json());
 
 adminRouter.route('/')
@@ -39,8 +36,6 @@ adminRouter.route('/')
     res.statusCode = 403;
     res.end("Not allowed to delete all records at once");
 });
-
-
 
 adminRouter.route('/:studentId')
 .get((req,res,next) => {
