@@ -1,0 +1,14 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "state.username":"kamali",
+       "state.password":"789kamali"
+    },
+    {
+      "id": 2,
+      "state.username":"lakni",
+       "state.password":"123lakni"
+    }
+  ]
+}
