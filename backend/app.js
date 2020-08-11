@@ -32,7 +32,7 @@ app.use(session({
   store: new FileStore()
 }));
 app.use('/users', usersRouter);
-var auth = (req, res, next)=> {
+var auth = (req, res, next) => {
     console.log(req.session);
   if(!req.session.students) {
       var err = new Error('You are not authenticated!');
@@ -54,7 +54,7 @@ app.use(auth);
 
 app.use('/students', adminRouter);
 // Catch 404 and forward to error handler
-app.use((req, res, next)=> {
+app.use((req, res, next) => {
   next(createError(404));
 });
 
