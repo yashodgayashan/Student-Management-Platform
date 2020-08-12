@@ -53,15 +53,15 @@ adminRouter.route('/:studentId')
 });
 
 .put((req, res, next) => {
-    Students.findByIdAndUpdate(req.params.studentId,{
+    Students.findByIdAndUpdate(req.params.studentId, {
         $set: req.body
-    },{new: true })
-    .then((student)=>{
+    }, {new: true })
+    .then((student) => {
         res.statusCode = 200;
         res.setHeader('Content-Type','application/json');
         res.json(student);
-    }, (err)=>next(err))
-    .catch((err)=> next(err));
+    }, (err) => next(err))
+    .catch((err) => next(err));
 })
 
 .delete ((req, res, next) => {
