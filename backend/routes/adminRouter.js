@@ -65,7 +65,7 @@ adminRouter.route('/:studentId')
 })
 
 .delete ((req, res, next) => {
-    Students.findByIdAndRemove(req.params.studentId, function (err, resp) { 
+    Students.findByIdAndRemove(req.params.studentId, (err, resp) => { 
 	if (err) throw err;
         res.json();
     });
