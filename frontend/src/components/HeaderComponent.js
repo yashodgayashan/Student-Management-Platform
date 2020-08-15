@@ -1,17 +1,14 @@
 import React from "react";
+import { withRouter } from "react-router-dom";
 import { Navbar, NavbarBrand, Nav, NavItem, Button } from "reactstrap";
 
-const HeaderComponent = () => {
-  /*const [status, setStatus] = useState({username:'', remember:false})
-	const handleLogOut = (event) => {
-        alert("Username: " + username.value + " Password: " + this.password.value
-            + " Remember: " + remember.checked);	
-        event.preventDefault();	
-	}*/
-
+const HeaderComponent = (props) => {
   const handleLogOut = (event) => {
-    alert("User Logged Out");
-    event.preventDefault();
+    let confirmlogout = window.confirm("Are you sure you wish to logout?");
+    if (confirmlogout) {
+      alert("User Logged Out");
+      props.history.push("/login");
+    }
   };
 
   return (
@@ -19,7 +16,7 @@ const HeaderComponent = () => {
       <Navbar style={{ backgroundColor: "#272c2e" }} dark expand="md">
         <div className="container">
           <NavbarBrand className="mr-auto" href="/">
-            <img src="" alt="Admin View" />
+            <img src="" alt="Student Management System" />
           </NavbarBrand>
           <Nav className="ml-auto" navbar>
             <NavItem>
@@ -33,4 +30,4 @@ const HeaderComponent = () => {
     </>
   );
 };
-export default HeaderComponent;
+export default withRouter(HeaderComponent);

@@ -3,12 +3,9 @@ import TableComponent from "./TableComponent";
 import AddModal from "./AddModal";
 import HeaderComponent from "./HeaderComponent";
 import { userContext } from "../context/userContext";
-import { Loading } from "./LoadingComponent";
 
-const Main = () => {
-  const { isLoading, users, getUsers, addUser, deleteUser } = useContext(
-    userContext
-  );
+const AdminComponent = () => {
+  const { users, getUsers, addUser, deleteUser } = useContext(userContext);
 
   useEffect(() => {
     getUsers();
@@ -16,12 +13,12 @@ const Main = () => {
 
   return (
     <div className="container">
-      <div className>
+      <div>
         <HeaderComponent />
       </div>
 
       <div className="col-12 mt-2">
-        <AddModal addUser={addUser} isLoading = {isLoading} />
+        <AddModal addUser={addUser} />
       </div>
 
       <div className="col-12 mt-2">
@@ -30,4 +27,4 @@ const Main = () => {
     </div>
   );
 };
-export default Main;
+export default AdminComponent;

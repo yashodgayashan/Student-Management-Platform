@@ -33,7 +33,7 @@ const UserContextProvider = (props) => {
   };
 
   const addUser = (values) => {
-    fetch(baseUrl + "users/", {
+    fetch('http://localhost:3001/' + "users/", {
       method: "post",
       headers: {
         "Content-Type": "application/json",

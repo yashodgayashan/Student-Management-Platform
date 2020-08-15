@@ -106,22 +106,13 @@
       "id": 11
     },
     {
+      "id": 12,
       "username": "Sharuka Perera",
       "password": "sp56",
       "address": "Colombo",
       "email": "sp@gmail.com",
       "telnum": "0112546522",
-      "type": "Student",
-      "id": 12
-    },
-    {
-      "username": "Bojitha Piyathilake",
-      "password": "bp34",
-      "address": "Colombo",
-      "email": "bp@gmail.com",
-      "telnum": "0112545633",
-      "type": "Student",
-      "id": 13
+      "type": "Student"
     }
   ]
 }
