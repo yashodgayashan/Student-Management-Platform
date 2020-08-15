@@ -8,8 +8,8 @@ function StudentComponent(props) {
   const { editUser } = useContext(userContext);
 
   const [userData, setUserdata] = useState({
-    id: props.userData.id,
     username: props.userData.username,
+    name: props.UserData.name,
     password: props.userData.password,
     address: props.userData.address,
     email: props.userData.email,
@@ -37,20 +37,6 @@ function StudentComponent(props) {
       </div>
       <div className="col-12 col-md-9 mt-3">
         <LocalForm onSubmit={(values) => handleSubmit(values)}>
-          <Row className="form-group">
-            <Label htmlFor="id" md={2}>
-              ID
-            </Label>
-            <Col md={10}>
-              <Control.text
-                model=".id"
-                id="id"
-                name="id"
-                value={userData.id}
-                className="form-control"
-              />
-            </Col>
-          </Row>
 
           <Row className="form-group">
             <Label htmlFor="username" md={2}>
@@ -67,6 +53,22 @@ function StudentComponent(props) {
               />
             </Col>
           </Row>
+
+          <Row className="form-group">
+              <Label htmlFor="name" md={2}>
+                Name
+              </Label>
+              <Col md={10}>
+                <Control.text
+                  model=".name"
+                  id="name"
+                  name="name"
+                  value={userData.name}
+                  onChange={handleInputChange}
+                  className="form-control"
+                />
+              </Col>
+            </Row>
 
           <Row className="form-group">
             <Label htmlFor="password" md={2}>

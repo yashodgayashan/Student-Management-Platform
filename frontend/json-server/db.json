@@ -2,117 +2,133 @@
   "users": [
     {
       "id": 0,
-      "username": "Bobby Tarantino",
+      "name": "Bobby Tarantino",
+      "username": "bobby",
       "password": "bt12",
       "address": "Chicago",
       "email": "bt@gmail.com",
       "telnum": "0115566452",
-      "type": "Student"
+      "accounttype": "student"
     },
     {
       "id": 1,
-      "username": "George Michael",
+      "name": "George Michael",
+      "username": "george",
       "password": "gm23",
       "address": "California",
       "email": "gm@gmail.com",
       "telnum": "0115588564",
-      "type": "Student"
+      "accounttype": "student"
     },
     {
       "id": 2,
-      "username": "Marshall Mathers",
+      "name": "Marshall Mathers",
+      "username": "em",
       "password": "mm34",
       "address": "New York",
       "email": "mm@gmail.com",
       "telnum": "011776645",
-      "type": "Student"
+      "accounttype": "student"
     },
     {
       "id": 3,
-      "username": "Micheal Scott",
+      "name": "Micheal Scott",
+      "username": "mike",
       "password": "ms45",
       "address": "San Francisco",
       "email": "ms@gmail.com",
       "telnum": "0116655523",
-      "type": "Admin"
+      "accounttype": "admin"
     },
     {
       "id": 4,
-      "username": "Jim Halpert",
+      "name": "Jim Halpert",
+      "username": "jim",
       "password": "jh56",
       "address": "Florida",
       "email": "jh@gmail.com",
       "telnum": "0119955548",
-      "type": "Student"
+      "accounttype": "student"
     },
     {
       "id": 5,
-      "username": "Pam Beesly",
+      "name": "Pamela Beesly",
+      "username": "pam",
       "password": "pb67",
       "address": "Ohio",
       "email": "pb@gmail.com",
       "telnum": "0114477652",
-      "type": "Student"
+      "accounttype": "student"
     },
     {
       "id": 6,
-      "username": "Dwight Schrute",
+      "name": "Dwight Schrute",
+      "username": "dee",
       "password": "ds78",
       "address": "Maryland",
       "email": "ds@gmail.com",
       "telnum": "0112365563",
-      "type": "Admin"
+      "accounttype": "admin"
     },
     {
       "id": 7,
-      "username": "Angela Martin",
+      "name": "Angela Martin",
+      "username": "angela",
       "password": "am89",
       "address": "Minnesota",
       "email": "am@gmail.com",
       "telnum": "0113546985",
-      "type": "Student"
+      "accounttype": "student"
     },
     {
       "id": 8,
-      "username": "Ryan Howard",
+      "name": "Ryan Howard",
+      "username": "ryan",
       "password": "rh90",
       "address": "Texas",
       "email": "rh@gmail.com",
       "telnum": "0112546854",
-      "type": "Student"
+      "accounttype": "student"
     },
     {
       "id": 9,
-      "username": "Kevin Malone",
+      "name": "Kevin Malone",
+      "username": "kevin",
       "password": "km99",
       "address": "California",
       "email": "km@gmail.com",
-      "telnum": "0112653254"
+      "telnum": "0112653254",
+      "accounttype": "student"
     },
     {
       "id": 10,
-      "username": "Post Malone",
+      "name": "Post Malone",
+      "username": "post",
       "password": "pm44",
       "address": "California",
       "email": "pm@gmail.com",
-      "telnum": "0112546325"
+      "telnum": "0112546325",
+      "accounttype": "student"
     },
     {
-      "username": "Yomal Perera",
+      "name": "Yomal Perera",
+      "username": "yomal",
       "password": "yp56",
       "address": "Colombo",
       "email": "yp@gmail.com",
       "telnum": "0112365236",
-      "id": 11
+      "id": 11,
+      "accounttype": "student"
     },
     {
-      "id": 12,
-      "username": "Sharuka Perera",
-      "password": "sp56",
-      "address": "Colombo",
-      "email": "sp@gmail.com",
-      "telnum": "0112546522",
-      "type": "Student"
+      "name": "Mary Anne",
+      "username": "Mary",
+      "password": "am45",
+      "address": "Winchester",
+      "email": "ma@gmail.com",
+      "telnum": "0125463254",
+      "accounttype": "student",
+      "id": 12
     }
   ]
 }

@@ -26,6 +26,7 @@ function AddModal(props) {
 
   const handleSubmit = (values) => {
     toggle();
+    alert(JSON.stringify(values));
     props.addUser(values);
   };
 
@@ -48,6 +49,36 @@ function AddModal(props) {
                   id="username"
                   name="username"
                   placeholder="Enter Username"
+                  className="form-control"
+                  validators={{
+                    required,
+                    minLength: minLength(3),
+                    maxLength: maxLength(20),
+                  }}
+                />
+                <Errors
+                  className="text-danger"
+                  model=".username"
+                  show="touched"
+                  messages={{
+                    required: "Required ",
+                    minLength: "Must be greater than 2 characters ",
+                    maxLength: "Must be 20 characters or less",
+                  }}
+                />
+              </Col>
+            </Row>
+
+            <Row className="form-group">
+              <Label htmlFor="name" md={2}>
+                Name
+              </Label>
+              <Col md={10}>
+                <Control.text
+                  model=".name"
+                  id="name"
+                  name="name"
+                  placeholder="Enter Name"
                   className="form-control"
                   validators={{
                     required,
@@ -174,17 +205,19 @@ function AddModal(props) {
             </Row>
 
             <Row className="form-group">
-              <Label htmlFor="type" md={2}>
+              <Label htmlFor="accounttype" md={2}>
                 Type
               </Label>
               <Col md={10}>
                 <Control.select
-                  model=".type"
-                  name="type"
+                  model=".accounttype"
+                  name="accounttype"
                   className="form-control"
+                  default="student"
                 >
-                  <option>Student</option>
-                  <option>Admin</option>
+                  <option>---</option>
+                  <option>student</option>
+                  <option>admin</option>
                 </Control.select>
               </Col>
             </Row>

@@ -11,15 +11,16 @@ const required = (val) => val && val.length;
 function LoginComponent(props) {
   const [login, setLogin] = useState({
     approved: true,
-    type: "admin",
-    userdata: {},
+    type: "admin"
   });
+  const [userData, setUserData] = useState({});
 
   const handleSubmit = (values) => {
     if (login.type === "admin" && login.approved === true){
       props.history.push("/admin");
     } 
     else if (login.type === "student" && login.approved === true){
+      
       props.history.push("/student");
     } else{
       alert('Incorrect Username or Password Entered')
@@ -66,8 +67,11 @@ function LoginComponent(props) {
         ...login,
         approved: item.approved,
         type: item.type,
-        userdata: {item.userData},
       });
+    fetch(baseUrl + "users/" + id.toString())
+      .then((response) => response.json())
+      .then((users) => setUserData(users))
+      .catch((err) => console.log(err));
     }
   };*/
 
@@ -154,7 +158,7 @@ function LoginComponent(props) {
             {login.approved && login.type === "student" && (
               <Route
                 path="/student"
-                component={() => <StudentComponent userData={login.userdata} />}
+                component={() => <StudentComponent userData={userData} />}
               />
             )}
             <Redirect to="/login" />

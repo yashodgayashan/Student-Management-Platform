@@ -40,12 +40,13 @@ const UserContextProvider = (props) => {
       },
       body: JSON.stringify({
         //id: uuid(), added by the react form
+        name:values.name,
         username: values.username,
         password: values.password,
         address: values.address,
         email: values.email,
         telnum: values.telnum,
-        type: values.type,
+        accounttype: values.accounttype,
       }),
     })
       .then((response) => response.json())
@@ -62,13 +63,13 @@ const UserContextProvider = (props) => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        id: userdata.id,
+        name: userdata.name,
         username: userdata.username,
         password: userdata.password,
         address: userdata.address,
         email: userdata.email,
         telnum: userdata.telnum,
-        type: userdata.type,
+        accounttype: userdata.accounttype,
       }),
     })
       .then((response) => response.json())

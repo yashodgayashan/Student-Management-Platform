@@ -7,12 +7,13 @@ function TableComponent(props) {
     return (
       <>
         <tr>
-          <td>{user.id}</td>
           <td>{user.username}</td>
+          <td>{user.name}</td>
           <td>{user.password}</td>
           <td>{user.address}</td>
           <td>{user.email}</td>
           <td>{user.telnum}</td>
+          <td>{user.accounttype}</td>
           <td>
             <div style={{ width: "110px" }}>
               <EditdetailsModal userData={user} />{" "}
@@ -30,12 +31,13 @@ function TableComponent(props) {
     <Table dark responsive hover>
       <thead>
         <tr>
-          <th>ID</th>
           <th>Username</th>
+          <th>Name</th>
           <th>Password</th>
           <th>Address</th>
           <th>Email</th>
           <th>Telnum</th>
+          <th>Account type</th>
         </tr>
       </thead>
       <tbody>{user}</tbody>

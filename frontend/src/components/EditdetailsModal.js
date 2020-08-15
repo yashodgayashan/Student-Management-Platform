@@ -17,11 +17,12 @@ function EditdetailsModal(props) {
   const [userData, setUserdata] = useState({
     id: props.userData.id,
     username: props.userData.username,
+    name: props.userData.name,
     password: props.userData.password,
     address: props.userData.address,
     email: props.userData.email,
     telnum: props.userData.telnum,
-    type: props.userData.type,
+    accounttype: props.userData.accounttype,
   });
 
   const [modal, setModal] = useState(false);
@@ -53,20 +54,6 @@ function EditdetailsModal(props) {
         <ModalHeader toggle={toggle}>Edit User</ModalHeader>
         <ModalBody>
           <LocalForm onSubmit={(values) => handleSubmit(values)}>
-            <Row className="form-group">
-              <Label htmlFor="id" md={2}>
-                ID
-              </Label>
-              <Col md={10}>
-                <Control.text
-                  model=".id"
-                  id="id"
-                  name="id"
-                  value={userData.id}
-                  className="form-control"
-                />
-              </Col>
-            </Row>
 
             <Row className="form-group">
               <Label htmlFor="username" md={2}>
@@ -78,6 +65,22 @@ function EditdetailsModal(props) {
                   id="username"
                   name="username"
                   value={userData.username}
+                  onChange={handleInputChange}
+                  className="form-control"
+                />
+              </Col>
+            </Row>
+
+            <Row className="form-group">
+              <Label htmlFor="name" md={2}>
+                Name
+              </Label>
+              <Col md={10}>
+                <Control.text
+                  model=".name"
+                  id="name"
+                  name="name"
+                  value={userData.name}
                   onChange={handleInputChange}
                   className="form-control"
                 />
@@ -150,19 +153,19 @@ function EditdetailsModal(props) {
             </Row>
 
             <Row className="form-group">
-              <Label htmlFor="type" md={2}>
-                Type
+              <Label htmlFor="accounttype" md={2}>
+                Ac. Type
               </Label>
               <Col md={10}>
                 <Control.select
-                  model=".type"
-                  name="type"
-                  value={userData.type}
+                  model=".accounttype"
+                  name="accounttype"
+                  value={userData.accounttype}
                   onChange={handleInputChange}
                   className="form-control"
                 >
-                  <option>Student</option>
-                  <option>Admin</option>
+                  <option>student</option>
+                  <option>admin</option>
                 </Control.select>
               </Col>
             </Row>
