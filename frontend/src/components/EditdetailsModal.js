@@ -31,9 +31,8 @@ function EditdetailsModal(props) {
   };
 
   const handleInputChange = (event) => {
-    const target = event.target;
-    const value = target.type === "checkbox" ? target.checked : target.value;
-    const name = target.name;
+    const value = event.target.value;
+    const name = event.target.name;
     setUserdata({
       ...userData,
       [name]: value, 

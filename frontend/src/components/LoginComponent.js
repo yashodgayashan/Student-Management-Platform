@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Button, Row, Col, Label } from "reactstrap";
 import StudentComponent from "./StudentComponent";
 import { Control, LocalForm, Errors } from "react-redux-form";
-import { Switch, Route, Redirect, Link } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 import AdminComponent from "./AdminComponent";
 import { withRouter } from "react-router-dom";
 
@@ -16,10 +16,10 @@ function LoginComponent(props) {
   });
 
   const handleSubmit = (values) => {
-    if (login.type == "admin" && login.approved == true){
+    if (login.type === "admin" && login.approved === true){
       props.history.push("/admin");
     } 
-    else if (login.type == "student" && login.approved == true){
+    else if (login.type === "student" && login.approved === true){
       props.history.push("/student");
     } else{
       alert('Incorrect Username or Password Entered')
@@ -148,10 +148,10 @@ function LoginComponent(props) {
         <div className="row">
           <Switch>
             <Route path="/login" component={Login} />
-            {login.approved && login.type == "admin" && (
+            {login.approved && login.type === "admin" && (
               <Route path="/admin" component={() => <AdminComponent />} />
             )}
-            {login.approved && login.type == "student" && (
+            {login.approved && login.type === "student" && (
               <Route
                 path="/student"
                 component={() => <StudentComponent userData={login.userdata} />}
