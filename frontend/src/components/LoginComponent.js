@@ -34,9 +34,9 @@ function LoginComponent(props) {
     });
     alert(JSON.stringify(login));
     alert(JSON.stringify(values));
+    */
     
-    
-    fetch("http://localhost:3001/" + "login/", {
+    fetch("http://localhost:3000/users/login", {
       method: "post",
       headers: {
         "Content-Type": "application/json",
@@ -45,12 +45,15 @@ function LoginComponent(props) {
         username: values.username,
         password: values.password,
       }),
+      credentials: 'same-origin'
     })
       .then((response) => response.json())
       .then((item) => {
-        checkType(item);
+        //checkType(item);
+        alert(JSON.stringify(item));
+        console.log(JSON.stringify(item))
       })
-      .catch((err) => alert("error"));*/
+      .catch((err) => alert(err));
   };
 
   /*const checkType = (item) => {
@@ -68,7 +71,7 @@ function LoginComponent(props) {
         approved: item.approved,
         type: item.type,
       });
-    fetch(baseUrl + "users/" + id.toString())
+    fetch("http://localhost:3000/students/" + id.toString())
       .then((response) => response.json())
       .then((users) => setUserData(users))
       .catch((err) => console.log(err));

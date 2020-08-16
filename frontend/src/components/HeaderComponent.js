@@ -7,6 +7,10 @@ const HeaderComponent = (props) => {
     let confirmlogout = window.confirm("Are you sure you wish to logout?");
     if (confirmlogout) {
       alert("User Logged Out");
+      fetch("http://localhost:3000/users/logout")
+      .then((response) => response.json())
+      .then((users) => alert(JSON.stringify(users)))
+      .catch((err) => console.log(err));
       props.history.push("/login");
     }
   };

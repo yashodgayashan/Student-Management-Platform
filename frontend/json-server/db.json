@@ -121,14 +121,24 @@
       "accounttype": "student"
     },
     {
-      "name": "Mary Anne",
+      "name": "Mary Anne Frank",
       "username": "Mary",
-      "password": "am45",
-      "address": "Winchester",
-      "email": "ma@gmail.com",
-      "telnum": "0125463254",
+      "password": "maf45",
+      "address": "Germany",
+      "email": "maf@gmail.com",
+      "telnum": "0125463244",
       "accounttype": "student",
       "id": 12
+    },
+    {
+      "name": "Bob",
+      "username": "Bob",
+      "password": "bob",
+      "address": "Bob",
+      "email": "bob@gmail.com",
+      "telnum": "0112112122",
+      "accounttype": "student",
+      "id": 13
     }
   ]
 }

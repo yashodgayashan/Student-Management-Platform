@@ -1,5 +1,5 @@
 import React, { createContext, useState } from "react";
-import { baseUrl } from "../shared/constants";
+//import { baseUrl } from "../shared/constants";
 
 export const userContext = createContext();
 
@@ -7,7 +7,7 @@ const UserContextProvider = (props) => {
   const [users, setUsers] = useState([]);
 
   const getUsers = () => {
-    fetch(baseUrl + "users")
+    fetch("http://localhost:3000/students")
       .then((response) => response.json())
       .then((users) => setUsers(users))
       .catch((err) => console.log(err));
@@ -33,14 +33,14 @@ const UserContextProvider = (props) => {
   };
 
   const addUser = (values) => {
-    fetch(baseUrl + "users/", {
+    fetch("http://localhost:3000/students/", {
       method: "post",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
         //id: uuid(), added by the react form
-        name:values.name,
+        name: values.name,
         username: values.username,
         password: values.password,
         address: values.address,
@@ -48,16 +48,19 @@ const UserContextProvider = (props) => {
         telnum: values.telnum,
         accounttype: values.accounttype,
       }),
+      credentials: 'same-origin'
     })
       .then((response) => response.json())
       .then((item) => {
+        alert(JSON.stringify(item));
+        console.log(item);
         addUserToState(item);
       })
-      .catch((err) => alert("error"));
+      .catch((err) => alert(err));
   };
 
   const editUser = (userdata) => {
-    fetch(baseUrl + "users/" + userdata.id.toString(), {
+    fetch("http://localhost:3000/students/" + userdata.id.toString(), {
       method: "put",
       headers: {
         "Content-Type": "application/json",
@@ -71,6 +74,7 @@ const UserContextProvider = (props) => {
         telnum: userdata.telnum,
         accounttype: userdata.accounttype,
       }),
+      credentials: 'same-origin'
     })
       .then((response) => response.json())
       .then((item) => {
@@ -82,11 +86,12 @@ const UserContextProvider = (props) => {
   const deleteUser = (id) => {
     let confirmDelete = window.confirm("Delete item forever?");
     if (confirmDelete) {
-      fetch(baseUrl + "users/" + id.toString(), {
+      fetch("http://localhost:3000/students/" + id.toString(), {
         method: "delete",
         headers: {
           "Content-Type": "application/json",
         },
+        credentials: 'same-origin'
       })
         .then((response) => response.json())
         .then((item) => {
