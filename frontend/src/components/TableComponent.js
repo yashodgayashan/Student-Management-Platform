@@ -17,7 +17,7 @@ function TableComponent(props) {
           <td>
             <div style={{ width: "110px" }}>
               <EditdetailsModal userData={user} />{" "}
-              <Button color="danger" onClick={() => props.deleteUser(user.id)}>
+              <Button color="danger" onClick={() => props.deleteUser(user._id)}>
                 Del
               </Button>
             </div>

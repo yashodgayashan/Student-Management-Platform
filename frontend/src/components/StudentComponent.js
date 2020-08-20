@@ -6,10 +6,10 @@ import HeaderComponent from "./HeaderComponent";
 
 function StudentComponent(props) {
   const { editUser } = useContext(userContext);
-
   const [userData, setUserdata] = useState({
+    _id: props.userData._id,
+    name: props.userData.name,
     username: props.userData.username,
-    name: props.UserData.name,
     password: props.userData.password,
     address: props.userData.address,
     email: props.userData.email,

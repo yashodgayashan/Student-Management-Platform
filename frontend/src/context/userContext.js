@@ -1,5 +1,5 @@
 import React, { createContext, useState } from "react";
-//import { baseUrl } from "../shared/constants";
+import { baseUrl } from "../shared/constants";
 
 export const userContext = createContext();
 
@@ -7,7 +7,7 @@ const UserContextProvider = (props) => {
   const [users, setUsers] = useState([]);
 
   const getUsers = () => {
-    fetch("http://localhost:3000/students")
+    fetch(baseUrl)
       .then((response) => response.json())
       .then((users) => setUsers(users))
       .catch((err) => console.log(err));
@@ -18,7 +18,7 @@ const UserContextProvider = (props) => {
   };
 
   const updateState = (user) => {
-    const userIndex = users.findIndex((data) => data.id === user.id);
+    const userIndex = users.findIndex((data) => data._id === user._id);
     const newArray = [
       ...users.slice(0, userIndex),
       user,
@@ -27,13 +27,13 @@ const UserContextProvider = (props) => {
     setUsers(newArray);
   };
 
-  const deleteUserFromState = (id) => {
-    const updatedUsers = users.filter((user) => user.id !== id);
+  const deleteUserFromState = (_id) => {
+    const updatedUsers = users.filter((user) => user._id !== _id);
     setUsers(updatedUsers);
   };
 
   const addUser = (values) => {
-    fetch("http://localhost:3000/students/", {
+    fetch(baseUrl, {
       method: "post",
       headers: {
         "Content-Type": "application/json",
@@ -52,15 +52,15 @@ const UserContextProvider = (props) => {
     })
       .then((response) => response.json())
       .then((item) => {
-        alert(JSON.stringify(item));
-        console.log(item);
+        //alert(JSON.stringify(item));
+        //console.log(item);
         addUserToState(item);
       })
       .catch((err) => alert(err));
   };
 
   const editUser = (userdata) => {
-    fetch("http://localhost:3000/students/" + userdata.id.toString(), {
+    fetch(baseUrl + userdata._id.toString(), {
       method: "put",
       headers: {
         "Content-Type": "application/json",
@@ -79,14 +79,15 @@ const UserContextProvider = (props) => {
       .then((response) => response.json())
       .then((item) => {
         updateState(item);
+        alert("Changes Made Successfully");
       })
       .catch((err) => alert("error"));
   };
 
-  const deleteUser = (id) => {
+  const deleteUser = (_id) => {
     let confirmDelete = window.confirm("Delete item forever?");
     if (confirmDelete) {
-      fetch("http://localhost:3000/students/" + id.toString(), {
+      fetch(baseUrl + _id.toString(), {
         method: "delete",
         headers: {
           "Content-Type": "application/json",
@@ -95,9 +96,10 @@ const UserContextProvider = (props) => {
       })
         .then((response) => response.json())
         .then((item) => {
-          deleteUserFromState(id);
+          alert("item recieved")
+          deleteUserFromState(item._id);
         })
-        .catch((err) => alert("error"));
+        .catch((err) => alert("backend error"));
     }
   };
 

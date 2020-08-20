@@ -15,7 +15,7 @@ function EditdetailsModal(props) {
   const { editUser } = useContext(userContext);
 
   const [userData, setUserdata] = useState({
-    id: props.userData.id,
+    _id: props.userData._id,
     username: props.userData.username,
     name: props.userData.name,
     password: props.userData.password,
@@ -42,6 +42,7 @@ function EditdetailsModal(props) {
 
   const handleSubmit = (values) => {
     toggle();
+    alert(JSON.stringify(userData));
     editUser(userData);
   };
 
