@@ -56,9 +56,8 @@ function LoginComponent(props) {
     }
   };
 
-  useEffect(() => {       //when the state changes this will run to check if type is student, if so 
-    alert(JSON.stringify(login));   //fetch stdeunt data and set to userData state
-    if (didMountRef.current) {
+  useEffect(() => {       //when the state changes this will run to check if type is student, if so                    
+    if (didMountRef.current) {    //fetch stdeunt data and set to userData state
       if (login.approved === true && login.Account_Type === "student") {
         fetch(baseUrl + login.id.toString())
           .then((response) => response.json())

@@ -4,10 +4,14 @@ import { Navbar, NavbarBrand, Nav, NavItem, Button } from "reactstrap";
 import { loginUrl } from "../shared/constants";
 
 const HeaderComponent = (props) => {
-  const handleLogOut = () => {
+  const handleLogOut = (event) => {
     let confirmlogout = window.confirm("Are you sure you wish to logout?");
     if (confirmlogout) {
       alert("User Logged Out");
+      fetch(loginUrl + "logout")
+      .then((response) => response.json())
+      .then((users) => alert(JSON.stringify(users)))
+      .catch((err) => console.log(err));
       props.history.push("/login");
     }
   };

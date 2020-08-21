@@ -26,7 +26,6 @@ function AddModal(props) {
 
   const handleSubmit = (values) => {
     toggle();
-    alert(JSON.stringify(values));
     props.addUser(values);
   };
 

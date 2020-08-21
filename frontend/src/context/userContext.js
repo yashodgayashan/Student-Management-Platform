@@ -39,7 +39,6 @@ const UserContextProvider = (props) => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        //id: uuid(), added by the react form
         name: values.name,
         username: values.username,
         password: values.password,
@@ -52,8 +51,6 @@ const UserContextProvider = (props) => {
     })
       .then((response) => response.json())
       .then((item) => {
-        //alert(JSON.stringify(item));
-        //console.log(item);
         addUserToState(item);
       })
       .catch((err) => alert(err));
@@ -94,14 +91,13 @@ const UserContextProvider = (props) => {
         },
         credentials: 'same-origin'
       })
-        .then((response) => response.json())
-        .then((item) => {
-          alert("item recieved")
-          deleteUserFromState(item._id);
-        })
-        .catch((err) => alert("backend error"));
-    }
-  };
+      .then((response) => response.json())
+      .then((item) => {   //as long as a response is recieved send the _id recieved by this method to the 
+        deleteUserFromState(_id);   //deleteUserFromState method. No need to get the ID from the response.
+      })
+      .catch((err) => alert("error"));
+  }
+};
 
   return (
     <userContext.Provider

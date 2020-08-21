@@ -42,7 +42,6 @@ function EditdetailsModal(props) {
 
   const handleSubmit = (values) => {
     toggle();
-    alert(JSON.stringify(userData));
     editUser(userData);
   };
 
