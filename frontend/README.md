@@ -4,6 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 The frontend uses Context API for state management.<br />
 fetch is used to communicate with the backend which is hosted on port 3000<br />
+The base URLs to access the backedn are available within the constants.js file.<br />
 
 
 ## Available Scripts

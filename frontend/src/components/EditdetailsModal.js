@@ -36,7 +36,7 @@ function EditdetailsModal(props) {
     const name = event.target.name;
     setUserdata({
       ...userData,
-      [name]: value, 
+      [name]: value,
     });
   };
 
@@ -54,7 +54,6 @@ function EditdetailsModal(props) {
         <ModalHeader toggle={toggle}>Edit User</ModalHeader>
         <ModalBody>
           <LocalForm onSubmit={(values) => handleSubmit(values)}>
-
             <Row className="form-group">
               <Label htmlFor="username" md={2}>
                 Username
