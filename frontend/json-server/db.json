@@ -1,0 +1,144 @@
+{
+  "users": [
+    {
+      "id": 0,
+      "name": "Bobby Tarantino",
+      "username": "bobby",
+      "password": "bt12",
+      "address": "Chicago",
+      "email": "bt@gmail.com",
+      "telnum": "0115566452",
+      "accounttype": "student"
+    },
+    {
+      "id": 1,
+      "name": "George Michael",
+      "username": "george",
+      "password": "gm23",
+      "address": "California",
+      "email": "gm@gmail.com",
+      "telnum": "0115588564",
+      "accounttype": "student"
+    },
+    {
+      "id": 2,
+      "name": "Marshall Mathers",
+      "username": "em",
+      "password": "mm34",
+      "address": "New York",
+      "email": "mm@gmail.com",
+      "telnum": "011776645",
+      "accounttype": "student"
+    },
+    {
+      "id": 3,
+      "name": "Micheal Scott",
+      "username": "mike",
+      "password": "ms45",
+      "address": "San Francisco",
+      "email": "ms@gmail.com",
+      "telnum": "0116655523",
+      "accounttype": "admin"
+    },
+    {
+      "id": 4,
+      "name": "Jim Halpert",
+      "username": "jim",
+      "password": "jh56",
+      "address": "Florida",
+      "email": "jh@gmail.com",
+      "telnum": "0119955548",
+      "accounttype": "student"
+    },
+    {
+      "id": 5,
+      "name": "Pamela Beesly",
+      "username": "pam",
+      "password": "pb67",
+      "address": "Ohio",
+      "email": "pb@gmail.com",
+      "telnum": "0114477652",
+      "accounttype": "student"
+    },
+    {
+      "id": 6,
+      "name": "Dwight Schrute",
+      "username": "dee",
+      "password": "ds78",
+      "address": "Maryland",
+      "email": "ds@gmail.com",
+      "telnum": "0112365563",
+      "accounttype": "admin"
+    },
+    {
+      "id": 7,
+      "name": "Angela Martin",
+      "username": "angela",
+      "password": "am89",
+      "address": "Minnesota",
+      "email": "am@gmail.com",
+      "telnum": "0113546985",
+      "accounttype": "student"
+    },
+    {
+      "id": 8,
+      "name": "Ryan Howard",
+      "username": "ryan",
+      "password": "rh90",
+      "address": "Texas",
+      "email": "rh@gmail.com",
+      "telnum": "0112546854",
+      "accounttype": "student"
+    },
+    {
+      "id": 9,
+      "name": "Kevin Malone",
+      "username": "kevin",
+      "password": "km99",
+      "address": "California",
+      "email": "km@gmail.com",
+      "telnum": "0112653254",
+      "accounttype": "student"
+    },
+    {
+      "id": 10,
+      "name": "Post Malone",
+      "username": "post",
+      "password": "pm44",
+      "address": "California",
+      "email": "pm@gmail.com",
+      "telnum": "0112546325",
+      "accounttype": "student"
+    },
+    {
+      "name": "Yomal Perera",
+      "username": "yomal",
+      "password": "yp56",
+      "address": "Colombo",
+      "email": "yp@gmail.com",
+      "telnum": "0112365236",
+      "id": 11,
+      "accounttype": "student"
+    },
+    {
+      "name": "Mary Anne Frank",
+      "username": "Mary",
+      "password": "maf45",
+      "address": "Germany",
+      "email": "maf@gmail.com",
+      "telnum": "0125463244",
+      "accounttype": "student",
+      "id": 12
+    },
+    {
+      "name": "Bob",
+      "username": "Bob",
+      "password": "bob",
+      "address": "Bob",
+      "email": "bob@gmail.com",
+      "telnum": "0112112122",
+      "accounttype": "student",
+      "id": 13
+    }
+  ]
+}
